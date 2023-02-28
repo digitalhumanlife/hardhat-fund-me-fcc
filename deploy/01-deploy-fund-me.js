@@ -9,7 +9,7 @@ module.exports = async ({ getNamedAccounts, deployments }) => {
     const chainId = network.config.chainId
 
     let ethUsdPriceFeedAddress
-    if (chainId == 31337) {
+    if (chainId == 1337) {
         const ethUsdAggregator = await deployments.get("MockV3Aggregator")
         ethUsdPriceFeedAddress = ethUsdAggregator.address
     } else {
